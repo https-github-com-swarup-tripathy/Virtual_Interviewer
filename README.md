@@ -40,3 +40,5 @@ For the text we could use the NLTK packages and along with web mining we could e
 The audio analysis can be done via deep learning or teachable machine by google to judge the candidate's audio while answering the recruiter's questions.
 
 **..We tried to make a difference and hope you all like it..**
+
+Make sure to download the models for the project to work.
