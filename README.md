@@ -42,3 +42,8 @@ The audio analysis can be done via deep learning or teachable machine by google 
 **..We tried to make a difference and hope you all like it..**
 
 Make sure to download the models for the project to work.
+1. face_landmarks 
+2. padding.pickle
+3. Personality_traits_NN.h5
+4. Personality_traits_NN
+5. Personality_traits_SVM
