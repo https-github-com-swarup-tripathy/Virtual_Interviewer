@@ -1,0 +1,8 @@
+EMOTION,VALUE
+Displease,0
+Disinterested,0
+Nervous,0
+Happy,0
+Unsure,1
+Confused,0
+Neutral,1
