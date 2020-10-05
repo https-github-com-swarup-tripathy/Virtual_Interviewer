@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": {"type": "line", "color": "orange", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Displease"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Displease"}}}, {"mark": {"type": "line", "color": "red", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Disinterested"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Disinterested"}}}, {"mark": {"type": "line", "color": "green", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Nervous"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Nervous"}}}, {"mark": {"type": "line", "color": "blue", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Happy"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Happy"}}}, {"mark": {"type": "line", "color": "black", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Unsure"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Unsure"}}}, {"mark": {"type": "line", "color": "pink", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Confused"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Confused"}}}, {"mark": {"type": "line", "color": "brown", "strokeWidth": 2}, "encoding": {"tooltip": [{"type": "quantitative", "field": "Neutral"}], "x": {"type": "quantitative", "field": "Time"}, "y": {"type": "quantitative", "field": "Neutral"}}}], "data": {"name": "data-92ae62fb13dc8d59bfd68421b59c8717"}, "height": 400, "title": "Probability of each emotion over time", "width": 1000, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-92ae62fb13dc8d59bfd68421b59c8717": [{"Time": 0, "Displease": 0.06885737180709839, "Disinterested": 4.770052692038007e-05, "Nervous": 0.36643919348716736, "Happy": 0.0006842112634330987, "Unsure": 0.3762922286987305, "Confused": 0.00531237805262208, "Neutral": 0.18236690759658813}, {"Time": 1, "Displease": 0.07758928835391997, "Disinterested": 0.0007097187917679548, "Nervous": 0.197290763258934, "Happy": 0.006572579499334097, "Unsure": 0.29739806056022644, "Confused": 0.001272760913707316, "Neutral": 0.4191668331623077}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
