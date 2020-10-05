@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" style="margin-left: 60px; margin-right: 60px;">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
+    <title>Interview Simulator</title>
+
+  </head>
+  <body>
+    <a href="/">
+      <img src = "/static/CSS/images/logo.png"  height="30%" style="float:left; width: 500px;" >
+    </a>
+    <p style="font-family: PT Sans; font-size: 40px; position: absolute;top: 500px; text-align: center;"><i>"YOU CAN'T HIDE <br>YOUR EMOTIONS FROM ME"</i></p>
+    <br>
+
+ {% block body %}
+
+  <!--
+  Video Interview presentation
+  -->
+  <div>
+      <div>
+        <img src = "/static/CSS/images/head (2).png" width="700px" height="750px" style="float:right; margin-right: -55px; margin-top: -15px;">
+      </div>
+
+      <div  style=" text-align:justify; display:inline-block;">
+
+          <h2 style="font-size: 60px; border-bottom: 1px solid; margin-bottom: 5px;
+          padding-bottom: 20px; border-bottom-width: 2px; font-family: Secular One;">Background</h2>
+          <br>
+          <img src="/static/CSS/images/assesment.jpg" style="width: 600px; height: 600px;float: right;">
+          <p style="font-family: PT Sans; width: 50%; font-size: 25px; padding-top: 20px;">The current pandemic has forced the whole world to 
+            the New Era of DIGITISATION from classroom to the industrial 
+            organisations. Everyone was forced to Work from Home for their safety
+            and to follow the pandemic guidelines.<br><br>For students like us 
+            it gave us an opportunity to build something cool for our industrial
+            organisations who were facing problems majorly in hiring sectors.The only medium of interaction between the
+            interviewers and the candidate has been through the several video 
+            conferencing platforms where still it's difficult for interviewers to examine the facial expressions or the
+            body language to assess the candidate. Here the candidate has most of the advantage i.e while video
+            conferencing the webcam of candidates may or may not be good.<br><br>So we 
+            tech_mercenaries a team who is a participant in Infosys Summer of Ideas came up with an idea described below.</p>
+          <br>
+          <br>
+      </div>
+      <div style=" text-align:justify; display:inline-block;">
+          <h2 style="font-size: 60px; border-bottom: 1px solid; margin-bottom: 5px;
+          padding-bottom: 20px; border-bottom-width: 2px; font-family: Secular One; display: block;">General</h2><br>
+          <img src="/static/CSS/images/face re.jpg" style="width: 700px; height: 600px;float: left;">
+          <p style="font-family: PT Sans; width: 42%; font-size: 25px; padding-top: 20px; float: right;">
+            We introduce you to Virtual Interviewer which allows the candidate to answer typical interview questions through video. We have 
+            used a pre-trained <strong>complex Deep Learning algorithm</strong> that analyzes the results of the video 
+            and provides a summary of what our algorithm percieved to the Talent Acquisition Manager, and how the 
+            candidate performed compared to previous candidates.<br><br> In the current scenario where the companies
+            are struggling to hire candidates here our Model will make their task much simpler and more accurate in selection of the best candidate for their role.<br><br></p>
+          <br>
+          <br>
+      </div>
+      
+
+  </div>
+
+
+  <div>
+    <!--
+    Video Interview button
+    -->
+    <div style="padding-top: 30px;font-family: PT Sans; font-size: 30px; text-align: center;">
+      <p>So, you must be curious to know how we came up with this idea and what all
+        resources or libraries has been used by us<br><br>
+        Click below to find out the secrets behind this
+      </p>
+    </div>
+     <div style="padding-top: 20px; text-align: center;" >
+         <form action="/video" method="post" align="center" >
+         <input type="submit" name="video" value="Video Interview" align="center" >
+       </form>
+     </div>
+
+     
+</div>
+
+
+<br>
+
+      {# Fin du bloc "body" #}
+    {% endblock %}
+
+    <div style="padding-top: 100px; display:inline-block;padding-right: 30px;">
+      <p style="padding-right: 30px; font-family: PT Sans; font-size: 35px;">To know about the brains behind the project. Head to 
+      <a href="/rules" style="font-family: PT Sans; font-size: 45px; ">ABOUT US</a></p>
+    </div>
+
+  </body>
+</html>
